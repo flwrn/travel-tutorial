@@ -6,11 +6,14 @@ import router from './router'
 // import './style/normalize.css'
 import './style/style.css'
 import fastClick from 'fastclick'
+import VueAwesomeSwiper from 'vue-awesome-swiper'
+import 'swiper/dist/css/swiper.css'
 
 Vue.config.productionTip = false
 
 // 使用fastclick包来解决移动端click事件300ms延迟问题
 fastClick.attach(document.body)
+Vue.use(VueAwesomeSwiper)
 
 /* eslint-disable no-new */
 new Vue({

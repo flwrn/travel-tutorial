@@ -12,6 +12,6 @@ export default {
 
 <style>
 * {
-  font-family: "Trebuchet MS", "Droid Sans Fallback";
+  font-family: "Droid Sans Fallback";
 }
 </style>
