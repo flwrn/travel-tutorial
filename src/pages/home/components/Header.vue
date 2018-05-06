@@ -20,35 +20,33 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
-@import '~@/style/variable.scss';
+<style lang="stylus" scoped>
+@import '~@/style/variable.styl'
+.header
+  font-size: .32rem
+  display: flex
+  line-height: .86rem
+  background: $bgColor
+  color: #fff
 
-.header {
-  font-size: .32rem;
-  display: flex;
-  line-height: .86rem;
-  background: $bgColor;
-  color: #fff;
-  .header-left {
-    width: .64rem;
-    float: left;
-    text-align: center;
-  }
-  .header-input {
-    flex: 1;
-    margin-top: .12rem;
-    margin-left: .2rem;
-    padding-left: .2rem;
-    height: .64rem;
-    line-height: .64rem;
-    background: #fff;
-    border-radius: .1rem;
-    color: #ccc;
-  }
-  .header-right {
-    width: 1.24rem;
-    float: right;
-    text-align: center;
-  }
-}
+  .header-left
+    width: .64rem
+    float: left
+    text-align: center
+
+  .header-input
+    flex: 1
+    margin-top: .12rem
+    margin-left: .2rem
+    padding-left: .2rem
+    height: .64rem
+    line-height: .64rem
+    background: #fff
+    border-radius: .1rem
+    color: #ccc
+
+  .header-right
+    width: 1.24rem
+    float: right
+    text-align: center
 </style>

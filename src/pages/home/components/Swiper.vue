@@ -34,6 +34,9 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.wrapper >>> .swiper-pagination-bullet {
+  background: #fff;
+}
 .wrapper {
   width: 100%;
   height: 0;
@@ -44,5 +47,4 @@ export default {
     width: 100%;
   }
 }
-
 </style>
