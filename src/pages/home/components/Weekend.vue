@@ -4,7 +4,7 @@
       周末去哪儿
     </div>
     <ul>
-      <li class="item border-bottom" v-for="item of recommendList" :key="item.id">
+      <li class="item border-bottom" v-for="item of weekendList" :key="item.id">
         <div class="item-img-wrapper">
           <img class="item-img" :src="item.imgUrl" alt="">
         </div>
@@ -20,16 +20,11 @@
 <script>
 export default {
   name: 'HomeWeekend',
+  props: {
+    weekendList: Array
+  },
   data () {
     return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1711/f6/f6fe49bdcbb82882a3.water.jpg_200x200_4b818361.jpg',
-          title: '天津方特欢乐世界',
-          desc: '滨海新区'
-        }
-      ]
     }
   }
 }
@@ -41,14 +36,13 @@ export default {
     margin: 0
     padding: 0
   .title
-    margin-top: .2rem
     line-height: .8rem
     background: #eee
     text-indent: .2rem
   .item-img-wrapper
       overflow: hidden
       height: 0
-      padding-bottom: 33.9%
+      padding-bottom: 37.09%
       .item-img
         width: 100%;
   .item-info

@@ -21,16 +21,11 @@
 <script>
 export default {
   name: 'HomeRecommend',
+  props: {
+    recommendList: Array
+  },
   data () {
     return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1711/f6/f6fe49bdcbb82882a3.water.jpg_200x200_4b818361.jpg',
-          title: '天津方特欢乐世界',
-          desc: '滨海新区'
-        }
-      ]
     }
   }
 }

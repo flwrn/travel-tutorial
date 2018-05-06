@@ -8,7 +8,7 @@
       输入城市经典游玩主题
     </div>
     <div class="header-right">
-      城市
+      {{city}}
       <i class="fas fa-caret-down"></i>
     </div>
   </div>
@@ -16,7 +16,10 @@
 
 <script>
 export default {
-  name: 'Header'
+  name: 'Header',
+  props: {
+    city: String
+  }
 }
 </script>
 
