@@ -36,6 +36,8 @@ export default {
   ul
     margin: 0
     padding: 0
+  .border-bottom
+    border-bottom: 1px solid #ddd
   .title
     margin-top: .2rem
     line-height: .8rem
