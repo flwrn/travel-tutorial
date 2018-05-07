@@ -7,10 +7,12 @@
       <i class="fas fa-search"></i>
       输入城市经典游玩主题
     </div>
-    <div class="header-right">
-      {{city}}
-      <i class="fas fa-caret-down"></i>
-    </div>
+    <router-link to="/city">
+      <div class="header-right">
+        {{city}}
+        <i class="fas fa-caret-down"></i>
+      </div>
+    </router-link>
   </div>
 </template>
 
@@ -28,7 +30,7 @@ export default {
 .header
   font-size: .32rem
   display: flex
-  line-height: .86rem
+  line-height: $headerHeight
   background: $bgColor
   color: #fff
 
@@ -52,4 +54,5 @@ export default {
     width: 1.24rem
     float: right
     text-align: center
+    color: #fff
 </style>
