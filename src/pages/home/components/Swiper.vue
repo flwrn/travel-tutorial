@@ -33,7 +33,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="stylus" scoped>
 .wrapper >>> .swiper-pagination-bullet {
   background: #fff;
 }
