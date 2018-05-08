@@ -9,7 +9,8 @@
     </div>
     <router-link to="/city">
       <div class="header-right">
-        {{city}}
+        {{this.city}}
+        {{this.doubleCity}}
         <i class="fas fa-caret-down"></i>
       </div>
     </router-link>
@@ -17,10 +18,12 @@
 </template>
 
 <script>
+import {mapState, mapGetters} from 'vuex'
 export default {
   name: 'Header',
-  props: {
-    city: String
+  computed: {
+    ...mapState(['city']),
+    ...mapGetters(['doubleCity'])
   }
 }
 </script>
@@ -51,7 +54,8 @@ export default {
     color: #ccc
 
   .header-right
-    width: 1.24rem
+    min-width: 1.04rem
+    padding: 0 .1rem
     float: right
     text-align: center
     color: #fff
