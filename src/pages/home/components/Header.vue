@@ -10,7 +10,6 @@
     <router-link to="/city">
       <div class="header-right">
         {{this.city}}
-        {{this.doubleCity}}
         <i class="fas fa-caret-down"></i>
       </div>
     </router-link>
@@ -18,12 +17,11 @@
 </template>
 
 <script>
-import {mapState, mapGetters} from 'vuex'
+import {mapState} from 'vuex'
 export default {
   name: 'Header',
   computed: {
-    ...mapState(['city']),
-    ...mapGetters(['doubleCity'])
+    ...mapState(['city'])
   }
 }
 </script>
