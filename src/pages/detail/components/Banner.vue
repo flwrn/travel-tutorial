@@ -1,18 +1,18 @@
 <template lang="html">
   <div class="">
     <div class="banner" @click="handleBannerClick">
-      <img class="banner-img" src="//img1.qunarzz.com/sight/p0/1804/c8/c88bb5e69c9a9c5ea3.img.jpg_600x330_bda46e68.jpg" alt="">
+      <img class="banner-img" :src="bannerImg">
       <div class="banner-info">
         <div class="banner-title">
           古北水镇
         </div>
         <div class="banner-number">
           <i class="fas fa-image banner-icon"></i>
-          109
+          {{this.galleryImgs.length}}
         </div>
       </div>
     </div>
-    <common-gallery :imgs="imgs" v-show="showGallery" @close="handleGalleryClose"/>
+    <common-gallery :imgs="galleryImgs" v-show="showGallery" @close="handleGalleryClose"/>
   </div>
 </template>
 
@@ -20,12 +20,13 @@
 import CommonGallery from '@/common/gallery/Gallery.vue'
 export default {
   name: 'Banner',
+  props: {
+    sightName: String,
+    bannerImg: String,
+    galleryImgs: Array
+  },
   data () {
     return {
-      imgs: [
-        'http://img1.qunarzz.com/sight/p0/1804/c8/c88bb5e69c9a9c5ea3.img.jpg_r_800x800_0a55341c.jpg',
-        'http://img1.qunarzz.com/sight/p0/1804/fc/fccc3af343e06f8aa3.img.jpg_r_800x800_914c6ed0.jpg'
-      ],
       showGallery: false
     }
   },
