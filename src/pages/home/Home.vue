@@ -15,7 +15,7 @@ import HomeIcons from './components/Icons.vue'
 import HomeRecommend from './components/Recommend.vue'
 import HomeWeekend from './components/Weekend.vue'
 import axios from 'axios'
-import {mapState} from 'vuex'
+import { mapState } from 'vuex'
 export default {
   name: 'home',
   components: {
@@ -35,11 +35,11 @@ export default {
     }
   },
   computed: {
-    ...mapState(['city'])
+    ...mapState(['city', 'hostname'])
   },
   methods: {
     getHomeInfo () {
-      axios.get('/static/mock/index.json?city=' + this.city)
+      axios.get(this.hostname + '/api/index.json?city=' + this.city)
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc (res) {

@@ -17,6 +17,7 @@ import DetailBanner from './components/Banner.vue'
 import DetailHeader from './components/Header.vue'
 import DetailList from './components/List.vue'
 import axios from 'axios'
+import { mapState } from 'vuex'
 export default {
   name: 'Detail',
   components: {
@@ -32,9 +33,12 @@ export default {
       list: []
     }
   },
+  computed: {
+    ...mapState(['hostname'])
+  },
   methods: {
     getDetailInfo () {
-      axios.get('/api/detail.json', {
+      axios.get(this.hostname + '/api/detail.json', {
         params: {
           id: this.$route.params.id
         }
@@ -58,7 +62,7 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import '~@/style/variable.styl'
-  .content
-    height: 50rem
+@import '~@/style/variable.styl'
+.content
+  height: 50rem
 </style>

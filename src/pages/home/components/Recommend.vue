@@ -38,46 +38,46 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-  @import '~@/style/mixins.styl'
-  ul
-    margin: 0
-    padding: 0
-  .border-bottom
-    border-bottom: 1px solid #ddd
-  .title
-    margin-top: .2rem
-    line-height: .8rem
-    background: #eee
-    text-indent: .2rem
-  .item
-    overflow: hidden
-    display: flex
-    height: 1.9rem
-    .item-img
-      width: 1.7rem
-      height: 1.7rem
-      padding: .1rem
-    .item-info
-      flex: 1
-      padding: .1rem
-      min-width: 0
-      .item-title
-        margin: 0
-        padding: 0
-        line-height: .54rem
-        font-size: .32rem
-      .item-desc
-        margin: 0
-        padding: 0
-        line-height: .4rem
-        color: #ccc
-        ellipsis()
-      .item-button
-        line-height: .44rem
-        margin-top: .16rem
-        background: #ff9300
-        padding: 0 .1rem
-        border: 0
-        border-radius: .06rem
-        color: #fff
+@import '~@/style/mixins.styl'
+ul
+  margin: 0
+  padding: 0
+.border-bottom
+  border-bottom: 1px solid #ddd
+.title
+  margin-top: .2rem
+  line-height: .8rem
+  background: #eee
+  text-indent: .2rem
+.item
+  overflow: hidden
+  display: flex
+  height: 1.9rem
+  .item-img
+    width: 1.7rem
+    height: 1.7rem
+    padding: .1rem
+  .item-info
+    flex: 1
+    padding: .1rem
+    min-width: 0
+    .item-title
+      margin: 0
+      padding: 0
+      line-height: .54rem
+      font-size: .32rem
+    .item-desc
+      margin: 0
+      padding: 0
+      line-height: .4rem
+      color: #ccc
+      ellipsis()
+    .item-button
+      line-height: .44rem
+      margin-top: .16rem
+      background: #ff9300
+      padding: 0 .1rem
+      border: 0
+      border-radius: .06rem
+      color: #fff
 </style>

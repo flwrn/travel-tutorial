@@ -5,15 +5,12 @@
     </keep-alive>
   </div>
 </template>
-
 <script>
 export default {
   name: 'App'
 }
 </script>
-
-<style>
-* {
-  font-family: "Droid Sans Fallback";
-}
+<style lang="stylus">
+*
+  font-family: "Droid Sans Fallback"
 </style>

@@ -22,6 +22,7 @@ import CityHeader from './components/Header.vue'
 import CitySearch from './components/Search.vue'
 import CityList from './components/List.vue'
 import CityAlphabet from './components/Alphabet.vue'
+import { mapState } from 'vuex'
 export default {
   name: 'City',
   components: {
@@ -37,9 +38,12 @@ export default {
       letter: ''
     }
   },
+  computed: {
+    ...mapState(['hostname'])
+  },
   methods: {
     getCityInfo () {
-      axios.get('/api/city.json')
+      axios.get(this.hostname + '/api/city.json')
         .then(this.handleGetCityInfo)
     },
     handleGetCityInfo (res) {

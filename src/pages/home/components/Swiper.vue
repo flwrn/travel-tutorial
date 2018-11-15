@@ -34,6 +34,8 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
+
+// Why use curly braces here?
 .wrapper >>> .swiper-pagination-bullet {
   background: #fff;
 }
